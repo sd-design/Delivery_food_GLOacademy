@@ -1,3 +1,5 @@
+'use strict';
+
 const cartButton = document.querySelector("#cart-button");
 const authButton = document.querySelector('.button-auth');
 const logoutButton = document.querySelector('.button-out');
@@ -75,6 +77,7 @@ function logIN(event){
 
 function logOUT(){
   localStorage.clear()
+  userName.innerHTML = ""
   changeStatus()
 }
 
@@ -83,10 +86,15 @@ if(localStorage.getItem('authorizedToken')){
   if(localStorage.getItem('authorizedToken') === 'h2020HELLOgloAcademy'){
 console.log('authorization true')
 changeStatus()
+return true
+  }
+  else{
+    return false
   }
 }
 else{
   console.log('authorization false')
+  return false
 }
 }
 
@@ -98,3 +106,15 @@ function notify(text){
 document.addEventListener("DOMContentLoaded", function(event) { 
   checkAuthorizated()
 });
+
+// SLIDER
+
+new Swiper('.swiper-container', {
+  sliderPerView: 1,
+  loop: true,
+  autoplay:true,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+  }
+})

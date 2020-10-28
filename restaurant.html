@@ -21,13 +21,18 @@
 				<input type="text" class="input input-address" placeholder="Адрес доставки"/>
 			</label>
 			<div class="buttons">
+				<span class="user-name hidden"></span>
 				<button class="button button-primary button-auth">
 					<span class="button-auth-svg"></span>
 					<span class="button-text">Войти</span>
 				</button>
-				<button class="button" id="cart-button">
+				<button class="button button-cart" id="cart-button">
 					<span class="button-cart-svg"></span>
 					<span class="button-text">Корзина</span>
+				</button>
+				<button class="button button-primary hidden button-out">
+					<span class="button-text">Выйти</span>
+					<span class="button-out-svg"></span>
 				</button>
 			</div>
 		</header>
@@ -284,9 +289,8 @@
 		</div>
 		<!-- /.modal-dialog -->
 	</div>
-
-	<script src="js/main.js"></script>
 	<script src="https://unpkg.com/swiper@6.3.4/swiper-bundle.min.js"></script>
     <script src="js/disabledScroll.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
