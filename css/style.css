@@ -150,12 +150,12 @@ button {
 }
 
 .button-out {
-    display: none;
+    /*display: none; */
     margin: 0 5px;
 }
 
 .user-name {
-    display: none;
+    /*display: none;*/
     margin-right: 20px;
     font-weight: bold;
     font-size: 18px;
@@ -567,6 +567,7 @@ button {
     font-size: 20px;
     line-height: 23px;
 }
+.hidden{display: none!important;}
 
 @media (max-width: 1366px) {
     .container {
