@@ -61,7 +61,7 @@ function logIN(event){
   event.preventDefault();
   var login = document.querySelector("#login").value
   var password = document.querySelector("#password").value
-  console.log(login+' : '+password)
+  //console.log(login+' : '+password)
   if(login && password){
     localStorage.setItem('authorizedToken', 'h2020HELLOgloAcademy')
     localStorage.setItem('login', login)
@@ -79,6 +79,7 @@ function logOUT(){
   localStorage.clear()
   userName.innerHTML = ""
   changeStatus()
+  checkAuthorizated()
 }
 
 function checkAuthorizated(){
